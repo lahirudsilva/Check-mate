@@ -1,4 +1,4 @@
-const required = require('../src/validators/required');
+const { required, equalTo } = require('../src/validators');
 
 describe('Validators', () => {
   describe('required', () => {
@@ -8,6 +8,18 @@ describe('Validators', () => {
 
     it('should return true for non-empty value', () => {
       expect(required('John Doe')).toEqual(true);
+    });
+  });
+
+  describe('equalTo', () => {
+    it('should return an error message for non-matching values', () => {
+      expect(equalTo('password', 'password123')).toEqual(
+        'Passwords do not match',
+      );
+    });
+
+    it('should return true for matching values', () => {
+      expect(equalTo('password', 'password')).toEqual(true);
     });
   });
 
