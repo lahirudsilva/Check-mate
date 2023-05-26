@@ -1,4 +1,4 @@
-const validateForm = require('../src/utils');
+const { validateForm, getFieldErrors } = require('../src');
 
 describe('Form Validation', () => {
   it('should return a valid result for a valid form submission', () => {
@@ -37,6 +37,26 @@ describe('Form Validation', () => {
     expect(validationResult.errors).toEqual({
       username: 'This field is required',
       confirmPassword: 'Passwords do not match',
+    });
+  });
+
+  describe('getFieldErrors', () => {
+    it('should return an empty array for a form without errors', () => {
+      const validationErrors = {};
+
+      expect(getFieldErrors(validationErrors)).toEqual([]);
+    });
+
+    it('should return an array of field error messages for a form with errors', () => {
+      const validationErrors = {
+        firstName: 'This field is required',
+        email: 'Please enter a valid email',
+      };
+
+      expect(getFieldErrors(validationErrors)).toEqual([
+        'This field is required',
+        'Please enter a valid email',
+      ]);
     });
   });
 });

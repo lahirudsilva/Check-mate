@@ -2,7 +2,6 @@
 function equalTo(value, referenceValue) {
   // Check if the value matches the reference value
   if (value !== referenceValue) {
-    console.log(value, referenceValue);
     // Return an error message if the value is not equal to the reference value
     return 'Passwords do not match';
   }

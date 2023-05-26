@@ -3,5 +3,10 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "printWidth": 80,
+  "bracketSpacing": true,
+  "jsxSingleQuote": false,
+  "quoteProps": "as-needed",
+  "endOfLine": "auto"
 }
