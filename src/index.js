@@ -29,7 +29,7 @@ function validateForm(form, formValidators) {
           case 'date':
             validationResult = validators.date(fieldValue);
             break;
-          case 'crediCard':
+          case 'creditCard':
             validationResult = validators.creditCard(fieldValue);
             break;
           case 'maxLength':

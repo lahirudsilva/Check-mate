@@ -1,5 +1,6 @@
 // Validator function for file type fields
-function fileType(value, allowedTypes) {
+function fileType(value) {
+  const allowedTypes = ['jpg', 'png'];
   // Get the file extension from the value
   const fileExtension = value.split('.').pop();
 

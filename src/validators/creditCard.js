@@ -20,7 +20,7 @@ function creditCard(value) {
     shouldDouble = !shouldDouble;
   }
 
-  if (sum % 10 !== 0) {
+  if (sum % 10 !== 0 || cleanedValue.length < 16) {
     // Return an error message if the value is not a valid credit card number
     return 'Please enter a valid credit card number';
   }
