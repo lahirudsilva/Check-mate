@@ -18,3 +18,13 @@ You can install the Form Validation Library using npm:
 ```bash
 npm install check-mate
 ```
+
+## Usage
+
+To use the Form Validation Library, follow these steps:
+
+1. Import the library in your JavaScript/TypeScript file:
+
+```bash
+import { validateForm } from 'form-validation-library';
+```
