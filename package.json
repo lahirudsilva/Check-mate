@@ -4,9 +4,10 @@
   "description": "javascript library for form validation",
   "main": "src/index.js",
   "scripts": {
-    "test:core": "jest tests/core.spec.js",
-    "test:integration": "jest tests/integration.spec.js",
-    "test": "jest tests/core.spec.js tests/integration.spec.js",
+    "test:unit": "jest --testPathPattern=tests/unit/.*\\.spec\\.js$",
+    "test:integration": "jest tests/integration/integration.spec.js",
+    "test:all": "npm run test:unit && npm run test:integration",
+    "test": "npm run test:all",
     "build": "babel src -d dist",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write ."
