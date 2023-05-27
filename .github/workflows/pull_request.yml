@@ -1,6 +1,9 @@
 name: Pull Request Workflow
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     branches:
       - '**'
